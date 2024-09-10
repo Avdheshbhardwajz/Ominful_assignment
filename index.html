@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Debounced Search Example</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      #searchResults {
+        margin-top: 20px;
+      }
+      .result-item {
+        padding: 8px;
+        border: 1px solid #ddd;
+        margin-bottom: 5px;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Search</h1>
+    <input type="text" id="searchInput" placeholder="Type to search..." />
+    <div id="searchResults"></div>
+
+    <!-- Load the JS file with defer attribute -->
+    <script src="script.js" defer></script>
+    <!-- 
+    defer: The script is executed after the HTML document has been fully parsed.
+    This ensures that the DOM is ready before the script runs, preserving the
+    order of execution if multiple scripts are used. It's ideal for scripts that
+    interact with the DOM. 
+    
+    async: The script is executed as soon as it is
+    downloaded, potentially before the HTML document is fully parsed. This is
+    suitable for scripts that don't depend on the DOM or other scripts. -->
+  </body>
+</html>
